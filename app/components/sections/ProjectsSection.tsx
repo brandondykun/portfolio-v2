@@ -145,7 +145,7 @@ const ProjectsSection = () => {
               <ProjectCardLink href="https://github.com/brandondykun/code-editor/tree/main">
                 View GitHub
               </ProjectCardLink>
-              <ProjectCardLink href="https://code-editor-lwkgli7mu-brandondykuns-projects.vercel.app/">
+              <ProjectCardLink href="https://code-editor-psi-hazel.vercel.app/">
                 View Live
               </ProjectCardLink>
             </ProjectCardFooter>
