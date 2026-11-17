@@ -2,19 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg: #f5f4ef;
+  --fg: #151515;
+  --muted: #55534e;
+  --subtle: #8a877f;
+  --line: #dcd9d1;
+  --rule: #151515;
+  --accent: #c2410c;
+  --accent-fg: #ffffff;
+  --btn-bg: #151515;
+  --btn-fg: #f5f4ef;
 
-.bg-accent {
-  @apply bg-green-500 dark:bg-green-500
+  /* Inverted "About" band */
+  --band-bg: #161616;
+  --band-fg: #f2f1ec;
+  --band-muted: #b7b4ad;
+  --band-subtle: #8a877f;
+  --band-line: #3a3936;
+  --band-accent: #ff7a45;
 }
 
-.text-accent {
-  @apply text-green-600 dark:text-green-500
-} 
+.dark {
+  --bg: #131313;
+  --fg: #f2f1ec;
+  --muted: #b7b4ad;
+  --subtle: #8a877f;
+  --line: #2a2927;
+  --rule: #6b6964;
+  --accent: #ff7a45;
+  --accent-fg: #151515;
+  --btn-bg: #f2f1ec;
+  --btn-fg: #151515;
 
-.border-accent {
-  @apply border-green-600 dark:border-green-500
-} 
+  --band-bg: #1b1b1b;
+  --band-fg: #f2f1ec;
+  --band-muted: #b7b4ad;
+  --band-subtle: #8a877f;
+  --band-line: #3a3936;
+  --band-accent: #ff7a45;
+}
 
-.shadow-accent {
-  @apply shadow-green-600 dark:shadow-green-500
-} 
+html {
+  scroll-padding-top: 4rem;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: var(--accent-fg);
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8 lg:px-12;
+  }
+
+  .eyebrow {
+    @apply font-mono text-[11px] uppercase tracking-[0.12em] text-subtle;
+  }
+
+  .focus-ring {
+    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+  }
+}
